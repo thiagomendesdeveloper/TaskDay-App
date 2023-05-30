@@ -10,7 +10,7 @@ export const ItemTodo: React.FC<PropsTodo> = ({ item, index, handleclick }) => {
             <TouchableOpacity onPress={() => handleclick()}>
                 <S.Check>
                     {item.selected && (
-                        <Icon name="check" size={20} color="#fff" />
+                        <Icon name="check" size={13} color="#fff" />
                     )}
                 </S.Check>
             </TouchableOpacity>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { LayoutAnimation } from 'react-native';
 
 interface Todo {
     text: string;
@@ -16,6 +17,7 @@ export const useTodo = () => {
     const [checked, setChecked] = useState(false);
 
     const addTodo = () => {
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.spring)
         if (newTodo.trim() !== '') {
             setTodos([...todos, { text: newTodo, selected: false }]);
             setNewTodo('');
@@ -23,6 +25,7 @@ export const useTodo = () => {
     };
 
     const removeTodo = () => {
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.spring)
         const updatedTodos = todos.filter((_, index) => !selectedTodos.includes(index));
         setTodos(updatedTodos);
         setSelectedTodos([]);
@@ -33,6 +36,8 @@ export const useTodo = () => {
     };
 
     const toggleSelectTodo = (index: number) => {
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.spring); // Configura a animação de layout
+
         const updatedTodos = [...todos];
         updatedTodos[index].selected = !updatedTodos[index].selected;
 

@@ -31,8 +31,8 @@ export const TodoButtonText = styled.Text`
 `;
 
 export const Check = styled.View`
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 3px;
   border: 1px solid #454545;
   margin-right: 10px;

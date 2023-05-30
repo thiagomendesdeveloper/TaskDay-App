@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-const useModalBottom = () => {
+type UseModalBottomReturnType = [boolean, () => void, () => void];
+
+const useModalBottom = (): UseModalBottomReturnType => {
     const [isVisible, setIsVisible] = useState(false);
 
     const showModal = () => {

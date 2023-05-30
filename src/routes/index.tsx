@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 export default function Routes() {
     return (
         <NavigationContainer>
-            <TabNavigator />
+            <Router />
         </NavigationContainer >
     )
 }

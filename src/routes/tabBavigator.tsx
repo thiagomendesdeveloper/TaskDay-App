@@ -10,11 +10,6 @@ const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
     return (
         <Tab.Navigator>
-            <Tab.Screen name="Intro" component={Intro} options={{
-                tabBarIcon: ({ color, size }) => (
-                    <Icon name="gear" size={20} color="#4044c9" />
-                ),
-            }} />
             <Tab.Screen name="Main" component={Home} options={{
                 headerShown: false,
                 tabBarIcon: ({ color, size }) => (
